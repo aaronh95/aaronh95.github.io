@@ -1,0 +1,31 @@
+<title>Midi Harmonizer (but really super cool)</title>
+<script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+<script src="script.js" type="module"></script>
+<h1>Midi Harmonizer</h1>
+<h2>Aaron Harsh</h2>
+<body>
+    <div>
+        <label for="dropdown-ins">Select a Midi Input:</label>
+        <select id="dropdown-ins">
+        </select>
+    </div>
+    <div>
+        <label for="dropdown-outs">Select a Midi Output:</label>
+        <select id="dropdown-outs">
+        </select>
+    </div>
+    <div>
+        <label for="slide1">Harmony 1 (recommended 7)</label>
+        <input type="range" id="slide1" min="-12" max="12">
+        <p id="harmony1amt">0 semitones</p>
+    </div>
+    <div>
+        <label for="slide2">Harmony 2 (recommended 12)</label>
+        <input type="range" id="slide2" min="-12" max="12">
+        <p id="harmony2amt">0 semitones</p>
+    </div>
+</body>
+
+<!-- My midi effect is a harmonizer. I originally intended to have the the effect just add the fifth and the octave to give the 
+    effect of playing a power chord w/ just one finger,but I thought it would be more useful to be able to select which intervals you want harmonized.
+    It works by adding the value from the slider to the root notes and then returns the root and two harmonies to the output. -->
